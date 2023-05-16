@@ -20,7 +20,7 @@ function language_array(language_tabs) {
       result.push(language_tabs[lang]);
     }
   }
-  return JSON.stringify(result).split('"').join('&quot;');
+  return JSON.stringify(result);
 }
 
 function image_tag(src, alt) {
@@ -83,7 +83,7 @@ function md(content) {
 }
 
 module.exports = {
-  layout: 'slate.ejs',
+  layout: 'slate.njk',
   page_classes: '',
   language_array,
   image_tag,
